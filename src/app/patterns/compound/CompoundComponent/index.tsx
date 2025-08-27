@@ -8,9 +8,9 @@ import {
 
 export default function CompoundComponent() {
   return (
-    <div>
+    <div className="mt-4">
       <ToggleCompound initialValue={false}>
-        <ToggleCompound.Switch />
+        <ToggleCompound.CustomSwitch />
         <ToggleCompound.On />
         <ToggleCompound.Off />
       </ToggleCompound>

@@ -101,7 +101,19 @@ ToggleCompound.Switch = () => {
   return (
     <button
       onClick={toggle}
-      className="bg-orange-500 text-white p-2 rounded-md cursor-pointer font-bold "
+      className="bg-orange-500 text-white p-2 rounded-md cursor-pointer font-bold mr-2"
+    >
+      Switch
+    </button>
+  )
+}
+
+ToggleCompound.CustomSwitch = () => {
+  const { toggle } = useToggle()
+  return (
+    <button
+      onClick={toggle}
+      className="bg-purple-500 text-white p-2 rounded-md cursor-pointer font-bold mr-2"
     >
       Switch
     </button>

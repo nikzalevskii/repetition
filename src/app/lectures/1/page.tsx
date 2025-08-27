@@ -1,5 +1,6 @@
-import CompoundComponent from "@/app/patterns/compound/CompoundComponent";
-import Link from "next/link";
+import CompoundComponent from '@/app/patterns/compound/CompoundComponent'
+import { MenuCompound } from '@/app/patterns/compound/Menu'
+import Link from 'next/link'
 
 export default function CompoundComponentsLecture() {
   return (
@@ -10,8 +11,9 @@ export default function CompoundComponentsLecture() {
       >
         Назад
       </Link>
-      <div>CompoundComponentsLecture</div>
+      <div className="text-2xl font-bold">CompoundComponents Lecture</div>
       <CompoundComponent />
+      <MenuCompound />
     </div>
-  );
+  )
 }
