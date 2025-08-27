@@ -77,28 +77,3 @@ MenuAccordion.Item = function MenuItem({ title }: { title: string }) {
     </div>
   )
 }
-
-export const MenuCompound = () => {
-  return (
-    <div>
-      <MenuAccordion>
-        <MenuAccordion.Title title="Главная" />
-        <MenuAccordion.Group title="Фильм">
-          <MenuAccordion.Item title="Топ" />
-          <MenuAccordion.Item title="Популярные" />
-          <MenuAccordion.Item title="Новые" />
-        </MenuAccordion.Group>
-        <MenuAccordion.Group title="Сериал">
-          <MenuAccordion.Item title="Топ" />
-          <MenuAccordion.Item title="Популярные" />
-          <MenuAccordion.Item title="Новые" />
-        </MenuAccordion.Group>
-        <MenuAccordion.Group title="Служебное">
-          <MenuAccordion.Item title="О нас" />
-          <MenuAccordion.Item title="Вопросы и ответы" />
-          <MenuAccordion.Item title="Контакты" />
-        </MenuAccordion.Group>
-      </MenuAccordion>
-    </div>
-  )
-}

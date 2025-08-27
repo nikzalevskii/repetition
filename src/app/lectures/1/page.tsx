@@ -1,5 +1,7 @@
-import CompoundComponent from '@/app/patterns/compound/CompoundComponent'
-import { MenuCompound } from '@/app/patterns/compound/Menu'
+import {
+  CompoundComponent,
+  MenuCompound,
+} from '@/app/patterns/compound/CompoundComponent'
 import Link from 'next/link'
 
 export default function CompoundComponentsLecture() {
