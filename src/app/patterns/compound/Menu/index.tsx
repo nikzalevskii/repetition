@@ -73,7 +73,7 @@ MenuAccordion.Title = function MenuTitle({ title }: { title: string }) {
 MenuAccordion.Item = function MenuItem({ title }: { title: string }) {
   return (
     <div>
-      <div>{title}</div>
+      <div className="text-gray-300">{title}</div>
     </div>
   )
 }

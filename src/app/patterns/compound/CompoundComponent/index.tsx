@@ -1,7 +1,8 @@
 'use client'
 
 import { ToggleCompound } from '@/app/patterns/compound/Toggle'
-import { MenuAccordion } from '../Menu'
+import { MenuAccordion } from '@/app/patterns/compound/Menu'
+import { menuData } from '@/app/patterns/compound/Menu/menuData'
 
 export const CompoundComponent = () => {
   return (
@@ -15,26 +16,30 @@ export const CompoundComponent = () => {
   )
 }
 
+// Компонент для рендеринга элемента меню
+const MenuItem = ({ item }: { item: { id: string; title: string } }) => {
+  return <MenuAccordion.Item title={item.title} />
+}
+
 export const MenuCompound = () => {
   return (
     <div>
       <MenuAccordion>
-        <MenuAccordion.Title title="Главная" />
-        <MenuAccordion.Group title="Фильм">
-          <MenuAccordion.Item title="Топ" />
-          <MenuAccordion.Item title="Популярные" />
-          <MenuAccordion.Item title="Новые" />
-        </MenuAccordion.Group>
-        <MenuAccordion.Group title="Сериал">
-          <MenuAccordion.Item title="Топ" />
-          <MenuAccordion.Item title="Популярные" />
-          <MenuAccordion.Item title="Новые" />
-        </MenuAccordion.Group>
-        <MenuAccordion.Group title="Служебное">
-          <MenuAccordion.Item title="О нас" />
-          <MenuAccordion.Item title="Вопросы и ответы" />
-          <MenuAccordion.Item title="Контакты" />
-        </MenuAccordion.Group>
+        {menuData.map((item: any) => {
+          if (item.type === 'item') {
+            return <MenuAccordion.Title key={item.id} title={item.title} />
+          }
+          if (item.type === 'group') {
+            return (
+              <MenuAccordion.Group key={item.id} title={item.title}>
+                {item.items.map((subItem: any) => (
+                  <MenuAccordion.Item key={subItem.id} title={subItem.title} />
+                ))}
+              </MenuAccordion.Group>
+            )
+          }
+          return null
+        })}
       </MenuAccordion>
     </div>
   )
