@@ -1,12 +1,19 @@
-"use client";
+'use client'
 
-import { Toggle, ToggleWithNewButton } from "@/app/patterns/compound/Toggle";
+import {
+  Toggle,
+  ToggleCompound,
+  ToggleWithNewButton,
+} from '@/app/patterns/compound/Toggle'
 
 export default function CompoundComponent() {
   return (
     <div>
-      <Toggle initialValue={false} />
-      <ToggleWithNewButton initialValue={false} />
+      <ToggleCompound initialValue={false}>
+        <ToggleCompound.Switch />
+        <ToggleCompound.On />
+        <ToggleCompound.Off />
+      </ToggleCompound>
     </div>
-  );
+  )
 }
