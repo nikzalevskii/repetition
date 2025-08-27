@@ -1,3 +1,4 @@
+import CompoundComponent from "@/app/patterns/compound/CompoundComponent";
 import Link from "next/link";
 
 export default function CompoundComponentsLecture() {
@@ -10,6 +11,7 @@ export default function CompoundComponentsLecture() {
         Назад
       </Link>
       <div>CompoundComponentsLecture</div>
+      <CompoundComponent />
     </div>
   );
 }
