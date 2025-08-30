@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -21,7 +21,23 @@ export default function Home() {
             Лекция 1. Render Props
           </Link>
         </li>
+        <li>
+          <Link
+            className="text-xl hover:underline hover:text-blue-200 transition-colors"
+            href="/lectures/3"
+          >
+            Лекция 3. HOC
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="text-xl hover:underline hover:text-blue-200 transition-colors"
+            href="/lectures/4"
+          >
+            Лекция 4. Train
+          </Link>
+        </li>
       </ul>
     </div>
-  );
+  )
 }
