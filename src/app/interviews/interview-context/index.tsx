@@ -53,9 +53,18 @@ const peoples: Persone[] = [
 const isAllAdult = peoples.every(person => person.age >= 18)
 console.log(`isAllAdult = ${isAllAdult}`)
 
-type View = React.FC<{ id: string; name: string }>
+type ViewProps = { id: string; name: string }
+type View = React.FC<ViewProps>
 
 const ViewComp1: View = props => <div>{JSON.stringify(props)}</div>
+
+export const HOCTest = (Component: View) => {
+  return function EnhancedComponent(props: ViewProps) {
+    return <Component {...props} />
+  }
+}
+
+const Next = HOCTest(ViewComp1)
 
 export const InterviewApp1 = () => {
   return (

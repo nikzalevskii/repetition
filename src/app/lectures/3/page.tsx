@@ -1,3 +1,4 @@
+import { HOCExample } from '@/app/patterns/hoc/example-1'
 import Link from 'next/link'
 
 export default function HOC() {
@@ -10,9 +11,7 @@ export default function HOC() {
         Назад
       </Link>
       <div>HOC Lecture</div>
-      <div className="mt-4 text-xl font-bold text-green-500">
-        Сделать пример с разными попапами, используя паттерн HOC
-      </div>
+      <HOCExample />
     </div>
   )
 }
