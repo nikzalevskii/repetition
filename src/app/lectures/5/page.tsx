@@ -1,4 +1,3 @@
-import { StateLocation } from '@/app/optimization/state-location'
 import Link from 'next/link'
 
 export default function Train() {
@@ -11,7 +10,26 @@ export default function Train() {
         Назад
       </Link>
       <div>Оптимизация</div>
-      <StateLocation />
+      <div>
+        <ul>
+          <li>
+            <Link
+              className="text-xl hover:underline hover:text-blue-200 transition-colors"
+              href="/optimization/state-location"
+            >
+              State Location
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="text-xl hover:underline hover:text-blue-200 transition-colors"
+              href="/optimization/conditional-rendering"
+            >
+              Conditional Rendering
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }
