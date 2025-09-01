@@ -37,6 +37,14 @@ export default function Home() {
             Лекция 4. Train
           </Link>
         </li>
+        <li>
+          <Link
+            className="text-xl hover:underline hover:text-blue-200 transition-colors"
+            href="/lectures/5"
+          >
+            Лекция 5. Оптимизация
+          </Link>
+        </li>
       </ul>
     </div>
   )
