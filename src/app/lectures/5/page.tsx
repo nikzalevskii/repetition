@@ -28,6 +28,22 @@ export default function Train() {
               Conditional Rendering
             </Link>
           </li>
+          <li>
+            <Link
+              className="text-xl hover:underline hover:text-blue-200 transition-colors"
+              href="/optimization/memoization"
+            >
+              Memoization
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="text-xl hover:underline hover:text-blue-200 transition-colors"
+              href="/optimization/transition"
+            >
+              Transition
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
