@@ -44,6 +44,14 @@ export default function Train() {
               Transition
             </Link>
           </li>
+          <li>
+            <Link
+              className="text-xl hover:underline hover:text-blue-200 transition-colors"
+              href="/optimization/context"
+            >
+              Context
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
