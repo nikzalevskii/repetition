@@ -52,6 +52,14 @@ export default function Train() {
               Context
             </Link>
           </li>
+          <li>
+            <Link
+              className="text-xl hover:underline hover:text-blue-200 transition-colors"
+              href="/optimization/lazy"
+            >
+              Lazy
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
